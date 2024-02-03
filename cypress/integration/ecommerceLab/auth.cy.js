@@ -27,10 +27,8 @@ describe("Test Authentication Flows", () => {
             registerPage.telephone(9990901919)
             registerPage.password("pwd23")
             registerPage.confirmPassword("pwd23")
-            // cy.contains('Yes').click()
             registerPage.subscriber('Yes')
             registerPage.checkbox()
-            // cy.contains('Continue').click()
             registerPage.clickContinue()
             cy.contains("Your Account Has Been Created").should('exist')
 
