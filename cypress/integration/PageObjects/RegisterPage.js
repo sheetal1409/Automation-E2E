@@ -11,32 +11,39 @@ class RegisterPage {
 
     }
 
-    getFirstName(firstname) {
+    firstName(firstname) {
         cy.getByLabelText("First Name").type(firstname, { delay: 0 })
     }
 
-    getLastName(lastName) {
+    lastName(lastName) {
         cy.getByLabelText("Last Name").type(lastName, { delay: 0 })
     }
 
-    getEmail(email) {
+    email(email) {
         cy.getByLabelText("E-Mail").type(email, { delay: 0 })
     }
 
-    getPhone(telephone) {
+    telephone(telephone) {
         cy.getByLabelText("Telephone").type(telephone)
     }
 
-    getPassword(pwd) {
+    password(pwd) {
         cy.getByLabelText("Password").type(pwd)
     }
-    getConfirmPassword(pwd) {
+    confirmPassword(pwd) {
         cy.getByLabelText("Password Confirm").type(pwd)
     }
 
+    subscriber(val) {
+        cy.getByLabelText(val).click()
+    }
 
-
-
+    checkbox() {
+        cy.get('[type="checkbox"]').click()
+    }
+    clickContinue() {
+        cy.findByText('Continue').click()
+    }
 }
 
 export default RegisterPage
